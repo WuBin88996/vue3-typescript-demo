@@ -22,6 +22,8 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'import/named': 'off',
     'func-names': 'off',
-    semi: ['error', 'never']
+    semi: ['error', 'never'],
+    'linebreak-style': ['off', 'windows'],
+    'import/extensions': 'off'
   }
 }

@@ -11,18 +11,18 @@
   </div>
 </template>
 
-<script>
-import { ref } from 'vue'
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
 
 import routes from '@/router/routes'
 
-export default {
+export default defineComponent({
   setup() {
     return {
       routes: ref(routes.filter((item) => item.path !== '/' && item.path !== '/*'))
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

@@ -5,7 +5,7 @@
   <div><component-1 @on-emit="componentEmit"></component-1></div>
   <div>watchData: {{watchData1}}</div>
   <div>computedData: {{computedData}}</div>
-  <button @click="changeWatch1">change watchdata1</button>
+   <button @click="changeWatch1">change watchdata1</button>
 </template>
 
 <script>
