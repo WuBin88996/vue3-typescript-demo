@@ -2,8 +2,10 @@
   <button @click="onEmit">组件抛出emit</button>
 </template>
 
-<script>
-export default {
+<script  lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   setup(props, { emit }) {
     const onEmit = () => {
       emit('on-emit', { aaa: 111 })
@@ -12,5 +14,5 @@ export default {
       onEmit
     }
   }
-}
+})
 </script>

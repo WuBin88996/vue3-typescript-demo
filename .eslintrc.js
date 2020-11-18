@@ -10,20 +10,21 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 12,
+    parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
   plugins: [
-    'vue'
+    'vue',
+    '@typescript-eslint'
   ],
   rules: {
     'no-console': 'off',
-    'import/no-unresolved': 'off', //
-    'vue/no-multiple-template-root': 'off',
-    'comma-dangle': ['error', 'never'],
-    'import/named': 'off',
     'func-names': 'off',
     semi: ['error', 'never'],
-    'linebreak-style': ['off', 'windows'],
+    'comma-dangle': ['error', 'never'],
+    'vue/no-multiple-template-root': 'off',
+    'import/no-unresolved': 'off',
     'import/extensions': 'off'
+    // 'no-undef': 'off'
   }
 }

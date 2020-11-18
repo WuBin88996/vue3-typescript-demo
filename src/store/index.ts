@@ -1,8 +1,8 @@
 import { reactive } from 'vue'
+import { userInfoDefault } from '@/default'
 
-const userInfoStore = reactive({
-  userId: 123,
-  userName: 'www'
+const userInfoStore = reactive<API.UserInfo>({
+  ...userInfoDefault
 })
 
 export default {

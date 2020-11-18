@@ -39,6 +39,7 @@ export default defineComponent({
     background-color: rgb(30, 80, 109);
     &.active{
       background-color: rgb(20, 168, 64);
+      color: $red-color;
     }
   }
 }

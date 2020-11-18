@@ -8,25 +8,36 @@
    <button @click="changeWatch1">change watchdata1</button>
 </template>
 
-<script>
+<script lang="ts">
 import {
-  inject, reactive, toRefs, watch, watchEffect, computed
+  defineComponent, inject, reactive, toRefs, watch, watchEffect, computed
 } from 'vue'
 // import { useRoute } from 'vue-router'
 import Component1 from '@/components/component1.vue'
+import { userInfoDefault } from '@/default/index'
+import { IndectStore, StateData } from './type'
+// export interface IndectStore {
+//   userInfoStore: API.UserInfo
+// }
 
-export default {
+// export interface StateData {
+//  watchData1: number,
+//  computedData: ComputedRef<number>
+// }
+export default defineComponent({
   components: {
     Component1
   },
   setup() {
-    const state = reactive({
-      userInfoStore: inject('store').userInfoStore,
-      // ...inject('store')
+    const state = reactive<StateData>({
       watchData1: 0,
-      computedData: computed(() => state.watchData1 + 1)
+      computedData: computed(():number => state.watchData1 + 1)
     })
-    console.log('userInfo', state.userInfoStore)
+    const {
+      userInfoStore
+    } = inject<IndectStore>('store', reactive<IndectStore>({
+      userInfoStore: { ...userInfoDefault }
+    }))
     watch(() => state.watchData1, (val, oldVal) => {
       console.log('watch====', val, oldVal)
     })
@@ -38,9 +49,9 @@ export default {
     })
     const methods = {
       changeUserInfo() {
-        state.userInfoStore.userName += 'o'
+        userInfoStore.userName += '+'
       },
-      componentEmit(params) {
+      componentEmit(params:object) {
         console.log('componentEmit', params)
       },
       changeWatch1() {
@@ -49,8 +60,9 @@ export default {
     }
     return {
       ...toRefs(state),
+      userInfoStore,
       ...methods
     }
   }
-}
+})
 </script>
