@@ -24,7 +24,8 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'vue/no-multiple-template-root': 'off',
     'import/no-unresolved': 'off',
-    'import/extensions': 'off'
+    'import/extensions': 'off',
+    'linebreak-style': [0, 'error', 'windows']
     // 'no-undef': 'off'
   }
 }
