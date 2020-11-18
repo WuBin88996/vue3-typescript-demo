@@ -16,14 +16,7 @@ import {
 import Component1 from '@/components/component1.vue'
 import { userInfoDefault } from '@/default/index'
 import { IndectStore, StateData } from './type'
-// export interface IndectStore {
-//   userInfoStore: API.UserInfo
-// }
 
-// export interface StateData {
-//  watchData1: number,
-//  computedData: ComputedRef<number>
-// }
 export default defineComponent({
   components: {
     Component1
