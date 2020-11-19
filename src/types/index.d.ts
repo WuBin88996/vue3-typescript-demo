@@ -6,7 +6,12 @@ declare namespace API{
 
   interface Result<T>{
     code: number
-    msg: string,
+    msg: string
     data: T
+  }
+
+  enum SSType {
+    IDA = 'id_a',
+    IDB = 'id_b'
   }
 }
