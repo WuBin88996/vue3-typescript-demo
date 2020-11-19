@@ -1,4 +1,4 @@
-export const userInfoDefault:API.UserInfo = {
+export const userInfoDefault: API.UserInfo = {
   userId: 0,
   userName: 'userName'
 }
