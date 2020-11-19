@@ -17,6 +17,7 @@ module.exports = {
     'comma-dangle': ['error', 'never'],
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'linebreak-style': ['off','windows'],
     '@typescript-eslint/member-delimiter-style': ['off'],
     'import/no-unresolved': 'off',
     '@typescript-eslint/no-explicit-any': ['off'],
