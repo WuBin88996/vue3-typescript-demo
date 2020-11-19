@@ -1,7 +1,7 @@
 import NotFount from '@/views/notFount.vue'
 import Page1 from '@/views/page1.vue'
 import Page2 from '@/views/page2.vue'
-import Page3 from '@/views/page3/page3.vue'
+import Page3 from '@/views/page3.vue'
 
 export default [
   {
