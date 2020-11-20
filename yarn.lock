@@ -450,7 +450,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.8.0"
 
-"@babel/plugin-syntax-jsx@^7.0.0", "@babel/plugin-syntax-jsx@^7.2.0", "@babel/plugin-syntax-jsx@^7.8.3":
+"@babel/plugin-syntax-jsx@^7.0.0", "@babel/plugin-syntax-jsx@^7.10.4", "@babel/plugin-syntax-jsx@^7.2.0", "@babel/plugin-syntax-jsx@^7.8.3":
   version "7.12.1"
   resolved "https://registry.npm.taobao.org/@babel/plugin-syntax-jsx/download/@babel/plugin-syntax-jsx-7.12.1.tgz#9d9d357cc818aa7ae7935917c1257f67677a0926"
   integrity sha1-nZ01fMgYqnrnk1kXwSV/Z2d6CSY=
@@ -880,7 +880,7 @@
     globals "^11.1.0"
     lodash "^4.17.19"
 
-"@babel/types@^7.0.0", "@babel/types@^7.10.4", "@babel/types@^7.10.5", "@babel/types@^7.11.0", "@babel/types@^7.12.0", "@babel/types@^7.12.1", "@babel/types@^7.12.5", "@babel/types@^7.4.4":
+"@babel/types@^7.0.0", "@babel/types@^7.10.3", "@babel/types@^7.10.4", "@babel/types@^7.10.5", "@babel/types@^7.11.0", "@babel/types@^7.12.0", "@babel/types@^7.12.1", "@babel/types@^7.12.5", "@babel/types@^7.4.4":
   version "7.12.6"
   resolved "https://registry.npm.taobao.org/@babel/types/download/@babel/types-7.12.6.tgz?cache=0&sync_timestamp=1604486388959&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Ftypes%2Fdownload%2F%40babel%2Ftypes-7.12.6.tgz#ae0e55ef1cce1fbc881cd26f8234eb3e657edc96"
   integrity sha1-rg5V7xzOH7yIHNJvgjTrPmV+3JY=
@@ -920,6 +920,14 @@
   integrity sha1-aNk1+j6uf91asNf5U/MgXYsr/Ck=
   dependencies:
     "@hapi/hoek" "^8.3.0"
+
+"@hcysunyang/babel-plugin-vue-next-jsx@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.npm.taobao.org/@hcysunyang/babel-plugin-vue-next-jsx/download/@hcysunyang/babel-plugin-vue-next-jsx-0.4.1.tgz#5af7fd006031a7d016dbb22440ed0c1d15c3557e"
+  integrity sha1-Wvf9AGAxp9AW27IkQO0MHRXDVX4=
+  dependencies:
+    "@babel/plugin-syntax-jsx" "^7.10.4"
+    "@babel/types" "^7.10.3"
 
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"

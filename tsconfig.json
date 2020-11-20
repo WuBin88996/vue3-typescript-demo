@@ -13,6 +13,7 @@
     "baseUrl": ".",
     "types": [
       "webpack-env"
+      // "@hcysunyang/babel-plugin-vue-next-jsx"
     ],
     "paths": {
       "@/*": [
