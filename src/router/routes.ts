@@ -2,8 +2,15 @@ import NotFount from '@/views/notFount.vue'
 import Page1 from '@/views/page1.vue'
 import Page2 from '@/views/page2.vue'
 import Page3 from '@/views/page3.vue'
+import Page4 from '@/views/page4'
 
-export default [
+interface RouteData {
+  path: string
+  name?: string
+  component: any
+}
+
+const routes: Array<RouteData> = [
   {
     path: '/',
     component: Page1
@@ -26,5 +33,12 @@ export default [
     path: '/page3',
     name: 'page3',
     component: Page3
+  },
+  {
+    path: '/page4',
+    name: 'page4',
+    component: Page4
   }
 ]
+
+export default routes

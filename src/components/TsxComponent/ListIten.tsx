@@ -1,18 +1,22 @@
 import { defineComponent } from 'vue'
 
+interface ItemProps {
+  msg: string
+  onOnShow: (msg: string) => void
+}
+
 export default defineComponent({
   name: 'listItem',
-  props: {
-    msg: String
-  },
-  setup(props, { emit }) {
+  // props: {
+  //   msg: String
+  // },
+  setup(props: ItemProps, { emit, attrs }) {
     const onEmit = function () {
-      console.log('onEmit', props.msg)
-      emit('on-emit', props.msg)
+      emit('onShow', attrs.msg)
     }
     return () => (
       <div>
-        {props.msg}
+        {attrs.msg}
         <aButton onClick={onEmit}>emit event</aButton>
       </div>
     )

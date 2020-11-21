@@ -35,6 +35,9 @@ export default defineComponent({
     const onItemEmit = function (msg: string) {
       console.log('onItemEmit', msg)
     }
+    // const itemClickEvent = function (){
+    //   console.log('itemClickEvent====')
+    // }
     return () => (
       <div class='tsx-demo'>
         <div class={state.className}>
@@ -47,7 +50,7 @@ export default defineComponent({
         <aButton type='danger' onClick={log.bind(this, refDom)}>console log ref Dom</aButton>
         {
           state.domList.map((item) => (
-            item !== '1' ? <ListItem msg={item} on-emit={onItemEmit}></ListItem> : null
+            item !== '1' ? <ListItem msg={item} onOnShow={onItemEmit}></ListItem> : null
           ))
         }
       </div>

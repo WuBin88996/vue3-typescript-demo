@@ -24,12 +24,12 @@ import Component1 from '@/components/component1.vue'
 import { userInfoDefault } from '@/default/index'
 
 interface IndectStore {
-  userInfoStore: API.UserInfo;
+  userInfoStore: API.UserInfo
 }
 
 interface StateData {
-  watchData1: number;
-  computedData: ComputedRef<number>;
+  watchData1: number
+  computedData: ComputedRef<number>
 }
 
 export default defineComponent({
