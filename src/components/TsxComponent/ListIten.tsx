@@ -2,7 +2,7 @@ import { defineComponent } from 'vue'
 
 interface ItemProps {
   msg: string
-  onOnShow: (msg: string) => void
+  onShow: (msg: string) => void
 }
 
 export default defineComponent({
@@ -12,7 +12,7 @@ export default defineComponent({
   // },
   setup(props: ItemProps, { emit, attrs }) {
     const onEmit = function () {
-      emit('onShow', attrs.msg)
+      emit('show', attrs.msg)
     }
     return () => (
       <div>

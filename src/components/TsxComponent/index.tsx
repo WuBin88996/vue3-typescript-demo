@@ -22,7 +22,7 @@ export default defineComponent({
       domList: ['1', '2', '3', '4', '5', '6'],
       className: 'red'
     })
-    const refDom = ref<null>(null)
+    const refDom = ref<any>(null)
     const handleCount = function () {
       state.count += 1
     }
@@ -35,6 +35,9 @@ export default defineComponent({
     const onItemEmit = function (msg: string) {
       console.log('onItemEmit', msg)
     }
+    const appendDom = function () {
+      (refDom.value as HTMLElement).innerHTML = '<span>123</span>'
+    }
     // const itemClickEvent = function (){
     //   console.log('itemClickEvent====')
     // }
@@ -45,12 +48,13 @@ export default defineComponent({
           <aButton onClick={changeClassName}>changge class Name</aButton>
         </div>
         <aButton type='primary' onClick={handleCount}>count ++ : {state.count}</aButton>
+        <aButton type='primary' onClick={appendDom}>append dom</aButton>
         <div>count + 1 = {state.computedData}</div>
         <div ref={refDom}>this is ref Dom</div>
         <aButton type='danger' onClick={log.bind(this, refDom)}>console log ref Dom</aButton>
         {
           state.domList.map((item) => (
-            item !== '1' ? <ListItem msg={item} onOnShow={onItemEmit}></ListItem> : null
+            item !== '1' ? <ListItem msg={item} onShow={onItemEmit}></ListItem> : null
           ))
         }
       </div>
