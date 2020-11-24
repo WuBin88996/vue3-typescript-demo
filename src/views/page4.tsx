@@ -25,6 +25,12 @@ const listItemClick = function (d: number) {
   console.log('listItemClick', d)
 }
 
+const obj1: any = {
+  a: null
+}
+
+console.log('obj1===', obj1?.a?.b?.c?.e ?? true)
+
 export default defineComponent({
   setup() {
     console.log('dom1111', dom1)

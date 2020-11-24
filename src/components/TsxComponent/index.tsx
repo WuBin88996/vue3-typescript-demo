@@ -22,7 +22,7 @@ export default defineComponent({
       domList: ['1', '2', '3', '4', '5', '6'],
       className: 'red'
     })
-    const refDom = ref<any>(null)
+    const refDom = ref<HTMLElement | null>(null)
     const handleCount = function () {
       state.count += 1
     }
@@ -36,7 +36,8 @@ export default defineComponent({
       console.log('onItemEmit', msg)
     }
     const appendDom = function () {
-      (refDom.value as HTMLElement).innerHTML = '<span>123</span>'
+      // (refDom.value as HTMLElement).innerHTML = '<span>123</span>'
+      refDom.value!.innerHTML = '<span>123</span>'
     }
     // const itemClickEvent = function (){
     //   console.log('itemClickEvent====')

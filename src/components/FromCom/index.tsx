@@ -41,15 +41,15 @@ export default defineComponent({
       // desc: [{ required: true, message: 'Please input activity form', trigger: 'blur' }]
     }
     const onSubmit = function (e: MouseEvent) {
-      console.log('onSubmit=', [e.target])
-    //   ruleForm.value
-    //     .validate()
-    //     .then(() => {
-    //       console.log('values', form)
-    //     })
-    //     .catch((error: any) => {
-    //       console.log('error', error)
-    //     })
+      console.log('onSubmit=', (e.target as HTMLElement).offsetLeft)
+      ruleForm.value
+        .validate()
+        .then(() => {
+          console.log('values', form)
+        })
+        .catch((error: any) => {
+          console.log('error', error)
+        })
     }
     const resetForm = function () {
       ruleForm.value.resetFields()
